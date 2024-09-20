@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+             x:Class="GymApp.MainPage">
+
+    <ScrollView>
+        <!-- Main layout-->
+        <Grid RowDefinitions="*,Auto,Auto,Auto" RowSpacing="15">
+            <!-- Background image-->
+            <Image Grid.Row="0" Grid.RowSpan="4" Source="alice" Aspect="AspectFill"/>
+
+            <VerticalStackLayout Grid.Row="0" Grid.RowSpan="4">
+                <VerticalStackLayout.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="Transparent" Offset="0.6"/>
+                        <GradientStop Color="Black" Offset="0.7"/>
+                    </LinearGradientBrush>
+                </VerticalStackLayout.Background> 
+            </VerticalStackLayout>
+
+
+            <Label VerticalOptions="End" Grid.Row="0" FontSize="25" Margin="20,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Create your account&#10;" TextColor="White"/>
+                        <Span Text="and unlock your potential, anytime anywhere." TextColor="#a8a7a5"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <buttons:SfButton Grid.Row="1" Text="Create an account" 
+                              FontAttributes="Bold" 
+                              TextColor="Black" 
+                              Background="#bfff0c" 
+                              Margin="20,0" 
+                              CornerRadius="20" 
+                              VerticalOptions="End"/>
+            
+            <buttons:SfButton Grid.Row="2" Text="Sign In" 
+                              FontAttributes="Bold" 
+                              TextColor="Black" 
+                              Background="White" 
+                              Margin="20,0" 
+                              CornerRadius="20"
+                              VerticalOptions="End"/>
+
+            <Label Grid.Row="3" HorizontalTextAlignment="Center" Margin="0,0,0,30">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="By signing up you'll be accepted&#10;" TextColor="White"/>
+                        <Span Text="our terms and policies." TextDecorations="Underline" TextColor="White"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Grid>
+
+    </ScrollView>
+
+</ContentPage>
